@@ -25,7 +25,12 @@ namespace GUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only.");
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                textBox1.Select(textBox1.Text.Length, 0);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,12 +45,22 @@ namespace GUI
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only.");
+                textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                textBox3.Select(textBox3.Text.Length, 0);
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only.");
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                textBox2.Select(textBox2.Text.Length, 0);
+            }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
